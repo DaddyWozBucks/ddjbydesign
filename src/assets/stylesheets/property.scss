@@ -1,0 +1,133 @@
+.prop_view {
+    align-self: center;
+    min-height: 20rem;
+    max-height: 25rem;
+    padding: 1% 5%;
+    margin-top: 3%;
+
+}
+.site_body {
+  font-family: 'Raleway';
+}
+.prop_viewer{
+  // border: 1px solid white;
+  // border-radius: 5px;
+  padding: 2% 2%;
+}
+.prop_reel {
+  overflow-x: scroll;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.prop_text{
+  margin: 5% 0;
+}
+.prop_img {
+  height: 25rem;
+  width: auto;
+}
+.view_nav{
+  margin: 2% 5%;
+}
+.m {
+  margin: 0 auto;
+  z-index: 1000;
+}
+#ml {
+  float: right;
+  height: 100%;
+  width: 50%;
+}
+#mr {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+#overlay {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+}
+.viewbtn{
+  min-height: 100%;
+  width: 50%;
+  background-color: transparentize(grey, .9);
+  position: absolute;
+  opacity: 0.7;
+}
+.next_btn {
+  margin-top: 50%;
+  font-size: 4rem;
+  font-color: transparentize(grey, .9)
+}
+.l{
+  left: 50%;
+
+  background: -moz-linear-gradient(right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.36) 4%, rgba(0,0,0,0) 9%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.36) 4%,rgba(0,0,0,0) 9%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.36) 4%,rgba(0,0,0,0) 9%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+.r{
+  right: 50%;
+  background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.36) 4%, rgba(0,0,0,0) 9%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.36) 4%,rgba(0,0,0,0) 9%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.36) 4%,rgba(0,0,0,0) 9%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.prop_reel__slide {
+  // border: 1px solid white;
+  // border-radius: 5px;
+  background-size: cover;
+  height: 6rem;
+  width: 6rem;
+  float: left;
+  background-repeat: no-repeat;
+}
+.prop_body {
+  padding: 2% 5%;
+}
+.drop_item{
+  padding: 1% auto;
+}
+.card {
+  font-family: 'Raleway';
+}
+.prop_tile{
+  background-color: black;
+  border: 1px solid white;
+  color: #fff;
+  margin-top: 3%;
+}
+.prop_tile:hover{
+  color: #000;
+  background-color: transparentize(#fff, 0.6);;
+}
+.prop_tile_array {
+  height: 75px;
+}
+.proptile_text {
+  text-align: center;
+  padding: 2% 5%;
+  vertical-align: middle;
+
+}
+.custom_drop {
+  width: 100%;
+  padding: 2% 5%;
+  background-color: transparentize(grey, .9);
+  color: black;
+}
+.prop_title{
+  font-family: 'Raleway';
+  color: white;
+}
+.prop_data {
+
+}
+.storybox {
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.prop_desc {
+ margin-bottom: 5%;
+}

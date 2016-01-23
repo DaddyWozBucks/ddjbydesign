@@ -1,0 +1,13 @@
+
+div.modal-header.modal_style(ng-click="close()")
+    image.img-responsive(src="assets/images/site/phototitle.jpg")
+div.modal-body.modal_style
+  image.img-responsive(src="{{modalImage.url}}")
+div.modal-footer.modal_style
+  div.text-center Share
+  div.container  
+    a.social_btn(socialshare socialshare-provider="facebook",socialshare-text="Design by Dafydd Dale Jones",socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}", socialshare-media="{{modalImage.shareurl}}") facebook
+    a.social_btn(socialshare socialshare-provider="twitter",socialshare-text="Design by Dafydd Dale Jones",socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}", socialshare-media="{{modalImage.shareurl}}") Twitter
+    a.social_btn(socialshare socialshare-provider="pinterest",socialshare-text="Design by Dafydd Dale Jones",socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}", socialshare-media="{{modalImage.shareurl}}") Pinterest
+    a.social_btn(socialshare socialshare-provider="tumblr",socialshare-text="Design by Dafydd Dale Jones",socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}", socialshare-media="{{modalImage.shareurl}}") Tumblr
+                

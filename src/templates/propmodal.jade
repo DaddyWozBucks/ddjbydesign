@@ -1,0 +1,14 @@
+div.modal-header.modal_style(ng-click="close()")
+    image.img-responsive(src="assets/images/site/proptitle.jpg")
+div.modal-body.modal_style
+    div  
+      div.viewbtn.l(ng-click="nextView()") 
+        div.next_btn#right
+          span.glyphicon.glyphicon-chevron-right
+      div.viewbtn.r(ng-click="lastView()")  
+        div.next_btn#left
+          span.glyphicon.glyphicon-chevron-left
+      image.img-responsive.piece_img(ng-src="{{modalProp.url}}")
+    
+div.modal-footer.modal_style(ng-click="close()")
+  h4.text-center Close

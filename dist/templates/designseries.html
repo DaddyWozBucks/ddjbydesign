@@ -1,0 +1,29 @@
+
+<div ng-style="mobilebuffer" class="site_title2 col-xs-12 col-lg-10 col-lg-offset-1">
+  <image src="/assets/images/site/designtitle.jpg" class="site_title__img img-responsive"></image>
+</div>
+<div class="container">
+  <div class="des_nav">
+    <div ng-repeat="series in seriesArray" ui-sref="{{series.state}}" class="des_nav_item"> 
+      <h5 class="text-center">{{series.title| uppercase }}</h5>
+    </div>
+  </div>
+</div>
+<div class="art_subhead container"> 
+  <div class="subtitle_text col-xs-12">{{ currSeries.title | uppercase}} </div>
+  <p class="subhead_text text-center"> {{ currSeries.description }} </p>
+</div>
+<div class="tilebox container">
+  <div ng-repeat="image in currSeries.photos | orderBy: 'id'" ng-click="openDModal(image)" ng-style="{'background-image':'url({{image.url}})'}" class="photo_tile col-lg-2 col-md-3 col-xs-12"></div>
+</div>
+<div class="designlink col-xs-12 col-lg-7">
+  <div class="designlink_array container">
+    <h3 class="text-center">Partners:</h3>
+    <div ng-repeat="a in currSeries.links" ng-style="{'background-image':'url({{a.image}})'}" ng-mouseenter="hoverIn()" ng-mouseleave="hoverOut()" class="designlink_box">
+      <div ng-show="showButton" class="designlink_box_fade">
+        <h4 class="designlink_box_title">{{a.text}}</h4><a ng-href="{{a.url}}">Website</a>
+      </div>
+    </div>
+    <div ng-show="mobilecheck"><a ng-href="{{a.url}}">{{a.text}}</a></div>
+  </div>
+</div>

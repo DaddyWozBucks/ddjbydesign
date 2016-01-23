@@ -1,0 +1,44 @@
+.photo_tile {
+  overflow: hidden;
+  height: 300px;
+  width: 240px;
+  // float: right;
+  padding: 2px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 1rem;
+
+
+}
+// .photo_tile_img {
+//   height: 300px;
+//   width: 300px;
+//   // float: left;
+//   overflow: hidden;
+//   padding: 5px;
+// }
+.searchbox_photo {
+
+}
+.photo_body {
+  padding: 2%;
+  // padding-right: 5%;
+
+  margin: 1% auto;
+}
+.photo_main{
+  width: auto;
+  max-height: 30rem;
+  background-size: cover;
+}
+.photo_detail_card {
+  padding: 5% 20%;
+}
+.modal_style{
+  background: black;
+  color: white;
+  border: 2px solid white;
+  font-family: 'Raleway';
+
+}

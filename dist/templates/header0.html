@@ -1,0 +1,11 @@
+
+<div ng-hide="mobilecheck" flex-container="row" flex-gutter="12" flex-align="center" class="header_card card bgc-black">
+  <button flex-item="2" ui-sref="app.intro" class="header_item btn btn--m btn--white btn--flat lx-ripple">INTRODUCTION</button>
+  <button flex-item="2" ui-sref="app.art" class="header_item btn btn--m btn--white btn--flat lx-ripple">ART</button>
+  <button flex-item="2" ui-sref="app.design" class="header_item btn btn--m btn--white btn--flat lx-ripple">DESIGN</button>
+  <button flex-item="2" ui-sref="app.photo" class="header_item btn btn--m btn--white btn--flat lx-ripple">PHOTOGRAPHY</button>
+  <button flex-item="2" ui-sref="app.property" class="header_item btn btn--m btn--white btn--flat lx-ripple">PROPERTY</button>
+  <button flex-item="2" ui-sref="app.contact" class="header_item btn btn--m btn--white btn--flat lx-ripple">CONTACT</button>
+</div>
+<div ng-show="mobilecheck" flex-container="row" flex-align="center" class="card bgc-black"><span flex-item="2" ui-sref="app.intro" class="mob_nav_btn tc-white fs-headline display-block">INTRODUCTION</span><span flex-item="2" ui-sref="app.art" class="mob_nav_btn tc-white fs-headline display-block">ART</span><span flex-item="2" ui-sref="app.design" class="mob_nav_btn tc-white fs-headline display-block">DESIGN</span><span flex-item="2" ui-sref="app.photo" class="mob_nav_btn tc-white fs-headline display-block">PHOTOGRAPHY</span><span flex-item="2" ui-sref="app.property" class="mob_nav_btn tc-white fs-headline display-block">PROPERTY</span><span flex-item="2" ui-sref="app.contact" class="mob_nav_btn tc-white fs-headline display-block">CONTACT</span></div>
+<div flex-container="column" ui-view="main" flex-align="center" class="mainui"></div>

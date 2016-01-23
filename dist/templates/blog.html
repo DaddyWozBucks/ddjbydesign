@@ -1,0 +1,16 @@
+
+<div ng-style="mobilebuffer" class="site_title2 container">
+  <image src="/assets/images/site/designtitle.jpg" class="site_title__img img-responsive"></image>
+  <div class="card subtitle_des"> 
+    <p class="text-center">Tales of my art</p>
+  </div>
+</div>
+<div class="container-fluid">
+  <div ng-repeat="story in stories" class="post col-xs-12 col-md-10 col-md-offset-1 container">
+    <div ng-href="#/app/blog/{{story.id}}" class="post_image"> 
+      <image src="{{story.images[0]}}" class="img-responsive"></image>
+    </div><a ng-href="#/app/blog/{{story.id}}" class="title_box">
+      <h3 class="text-center">{{story.title}}</h3></a><a ng-href="#/app/blog/{{story.id}}" class="body_box">
+      <p class="text-center">{{story.text}}</p></a>
+  </div>
+</div>

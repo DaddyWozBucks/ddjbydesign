@@ -1,0 +1,28 @@
+div.site_title2.col-xs-12.col-lg-10.col-lg-offset-1(ng-style="mobilebuffer")
+  image.site_title__img.img-responsive(src="/assets/images/site/designtitle.jpg")
+div.container
+  div.des_nav
+    //- div.col-xs-1(ng-hide="mobilecheck")
+    div.des_nav_item(ng-repeat="series in seriesArray", ui-sref="{{series.state}}" ) 
+      h5.text-center {{series.title| uppercase }}
+
+
+    
+div.art_subhead.container 
+  div.subtitle_text.col-xs-12 {{ currSeries.title | uppercase}} 
+  p.subhead_text.text-center  {{ currSeries.description }} 
+  
+ 
+div.tilebox.container
+  div.photo_tile.col-lg-2.col-md-3.col-xs-12(ng-repeat="image in currSeries.photos | orderBy: 'id'", ng-click="openDModal(image)",ng-style="{'background-image':'url({{image.url}})'}")
+div.designlink.col-xs-12.col-lg-7
+  
+  div.designlink_array.container
+    h3.text-center Partners:
+    div.designlink_box(ng-repeat="a in currSeries.links", ng-style="{'background-image':'url({{a.image}})'}", ng-mouseenter='hoverIn()', ng-mouseleave='hoverOut()')
+      div.designlink_box_fade(ng-show="showButton")
+        h4.designlink_box_title {{a.text}}
+        a(ng-href="{{a.url}}") Website
+    div(ng-show="mobilecheck")
+      a(ng-href="{{a.url}}") {{a.text}}
+  

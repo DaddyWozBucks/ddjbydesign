@@ -1,0 +1,21 @@
+div.site_title2.col-xs-12.col-lg-10.col-lg-offset-1(ng-style="mobilebuffer")
+  image.site_title__img.img-responsive(src="/assets/images/site/contacttitle.jpg")
+
+div.card.stack_nav.container
+    div.stack_nav_item.text-center.col-xs-4(ng-repeat="series in seriesArray", ui-sref="{{series.state}}" ) {{series.title| uppercase }}
+div.subtitle_text.col-xs-12 CONTACT
+    
+div.art_subhead.card()  
+  p.subhead_text.text-center I'm always happy to discuss potential custom pieces, business ventures and design collaboration.
+div.contact_card.container
+  div.contact_text__item
+    h3.text-center Dafydd Dale-Jones
+  div.contact_text__item  
+    h5.text-center Barcelona, Spain
+    h5.text-center Ibiza, Spain
+  div.contact_text__item
+    span.glyphicon-glyphicon-email
+    span ddalejones@yahoo.co.uk
+  div.contact_text__item
+    span.glyphicon-glyphicon-phone
+    span.fs-body-2.display-block +34-616-566-123

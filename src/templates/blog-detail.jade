@@ -1,0 +1,13 @@
+div.site_title2.container(ng-style="mobilebuffer")
+  image.site_title__img.img-responsive(src="/assets/images/site/designtitle.jpg")
+  div.card.subtitle_des 
+    p.text-center Tales of my art
+.container-fluid
+  div.post.col-xs-12.col-md-10.col-md-offset-1.container 
+    div.post_image  
+      image.img-responsive(src="{{story.images[0]}}")
+    div.title_box
+      h3.text-center {{story.title}}
+    div.post_box
+      p {{story.body}}
+    

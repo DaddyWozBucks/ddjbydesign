@@ -1,0 +1,46 @@
+
+<div ng-style="mobilebuffer" class="site_title2 container">
+  <image src="/assets/images/site/proptitle.jpg" class="site_title__img img-responsive"></image>
+  <div class="card subtitle_des"> 
+    <p class="text-center">
+      Between 1999 and 2001 I teamed up with Craig Griffin (Caring Homes Ltd) and started with a £2,500 deposit and a £1 option to trade over £20m worth of property.
+       I travelled constantly during this period to Marrakech, New York, Miami and the Carribean. I was interested to see where, and how people lived, and WHY. Buildings were built. I moved to Anglesey in Wales in 2002 and soon found opportunities there and in Manchester. With the help of Barry Owen OBE (Mason Owen) and Malcolm McClean (ex bank manager at Harrods Bank) as my funders, I went on to buy a pub, barns, a chapel, two garage sites, a country house, a car park and factories. Each were traded or developed with my prize deal assembling a £30,000,000 mixed use scheme in Manchester. I have spent the last few years living on Ibiza, London, Wales and the last two in Argentina. I am currently based in Barcelona and pursuing new projects here. </br>
+      </br> Should you wish to contact me to discuss any requirements or want to get involved in any of my projects, I look forward to hearing from you."
+    </p>
+  </div>
+</div>
+<div class="site_body container">
+  <div class="col-xs-12">
+    <h3 class="text-center">Completed Projects </h3>
+  </div>
+  <div class="piece_viewer col-xs-12 col-md-5 row">
+    <div>
+      <div ng-hide="mobilecheck">
+        <div ng-click="nextView()" class="viewbtn l"> 
+          <div id="right" class="next_btn"><span class="glyphicon glyphicon-chevron-right"></span></div>
+        </div>
+        <div ng-click="lastView()" class="viewbtn r"> 
+          <div id="left" class="next_btn"><span class="glyphicon glyphicon-chevron-left"></span></div>
+        </div>
+      </div>
+      <image src="{{centerView.url}}" ng-click="openPModal(centerView)" class="img-responsive piece_img"></image>
+    </div>
+    <div role="toolbar" class="view_nav btn-group">
+      <div ng-click="openPModal(centerView)"> 
+        <h5 class="text-center">Larger Image</h5>
+      </div>
+      <h3 class="col-xs-12 col-md-4 text-left">Projects:</h3>
+      <div class="col-xs-12 col-md-8">
+        <button ng-repeat="prop in propArray" ng-click="propChange(prop.id)" class="prop_tile btn btn-flat">{{prop.id}}</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-xs-12 prop_text container"> 
+    <div class="col-xs-12">
+      <h4 class="prop_title text-center">{{centerProp.title}}</h4>
+    </div>
+    <div class="col-xs-12"> 
+      <p class="prop_desc text-center">{{centerProp.description}}</p>
+    </div>
+  </div>
+</div>

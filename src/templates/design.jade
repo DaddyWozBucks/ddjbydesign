@@ -1,0 +1,10 @@
+div.site_title2.container(ng-style="mobilebuffer")
+  image.site_title__img.img-responsive(src="/assets/images/site/designtitle.jpg")
+  div.card.subtitle_des 
+    p.text-center {{designStatement}} 
+
+div.card.design_back.container
+  div.col-md-1(ng-hide="mobilecheck")
+  div.col-lg-3.col-md-3.col-sm-3.col-xs-12.arthouse_box(ng-repeat="s in seriesArray" ui-sref="{{s.state}}", ng-style="{'background-image':'url({{s.photo.url}})'}", ng-mouseenter='hoverIn()', ng-mouseleave='hoverOut()')
+    div.arthouse_box_fade(ng-show="showButton") {{s.title}}
+    h3.arthouse_box_title.text-center(ng-show="mobilecheck") {{s.title}}

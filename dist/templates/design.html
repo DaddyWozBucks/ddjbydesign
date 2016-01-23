@@ -1,0 +1,14 @@
+
+<div ng-style="mobilebuffer" class="site_title2 container">
+  <image src="/assets/images/site/designtitle.jpg" class="site_title__img img-responsive"></image>
+  <div class="card subtitle_des"> 
+    <p class="text-center">{{designStatement}} </p>
+  </div>
+</div>
+<div class="card design_back container">
+  <div ng-hide="mobilecheck" class="col-md-1"></div>
+  <div ng-repeat="s in seriesArray" ui-sref="{{s.state}}" ng-style="{'background-image':'url({{s.photo.url}})'}" ng-mouseenter="hoverIn()" ng-mouseleave="hoverOut()" class="col-lg-3 col-md-3 col-sm-3 col-xs-12 arthouse_box">
+    <div ng-show="showButton" class="arthouse_box_fade">{{s.title}}</div>
+    <h3 ng-show="mobilecheck" class="arthouse_box_title text-center">{{s.title}}</h3>
+  </div>
+</div>

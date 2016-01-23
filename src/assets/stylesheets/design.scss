@@ -1,0 +1,130 @@
+.tilebox_tile {
+  height: 150px;
+  width: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  margin: 2%;
+  overflow: hidden;
+}
+.series_box {
+  height: 300px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  margin: 1%;
+  float: left;
+  -webkit-transition: all 2s ease;
+  /* Safari */
+  transition: all 2s ease;
+}
+.subtitle_des {
+  padding: 3% 5%;
+}
+.designlink_subhead{
+  text-align: center;
+}
+.design{
+
+}
+.des_nav {
+  padding: 1% ;
+  margin: 1% auto;
+  font-family: 'Raleway';
+}
+.des_nav_item {
+  padding: 1% ;
+  margin: 1%;
+  width: 30%;
+  float:left;
+
+}
+.series_box_fade {
+  // -webkit-transition: all 2s ease;
+  // /* Safari */
+  // transition: all 2s ease;
+  color: black;
+  height: inherit;
+  text-align: center;
+  padding: 40% 5%;
+  font-family: 'Raleway';
+  background-color: transparentize(white, 0.2);
+}
+.header_btn {
+  height: 3rem;
+  padding: 2% 10%;
+  width: 100%;
+  font-family: 'Raleway';
+  text-align: center;
+}
+.hotel_abouts{
+  padding: 5% 5%;
+  text-align: justify;
+}
+.design_back {
+  padding: 5% auto;
+}
+.series_array {
+  margin: 0 auto;
+  margin-left: 2%;
+
+}
+.img_hide {
+    z-index: 4;
+    -webkit-transition: all 2s ease;
+    /* Safari */
+    transition: all 2s ease;
+    height: 30rem;
+}
+.img_hide.ng-hide {
+    opacity:0;
+}
+.map_box {
+  -webkit-transition: all 3s ease;
+  /* Safari */
+  transition: all 3s ease;
+}
+.designlink {
+  padding: 5%
+}
+.designlink_box {
+  height: 150px;
+  width: 150px;
+  background-size: cover;
+  padding: 0;
+  margin: 2rem;
+  float: left;
+  -webkit-transition: all 2s ease;
+  /* Safari */
+  transition: all 2s ease;
+}
+.designlink_box_fade {
+  // -webkit-transition: all 2s ease;
+  // /* Safari */
+  // transition: all 2s ease;
+  height: inherit;
+  text-align: center;
+  padding: 30% 5%;
+  font-family: 'Raleway';
+  background-color: transparentize(white, 0.2);
+}
+.designlink_box_title {
+  color: black;
+}
+.designlink_array {
+  margin: 0 auto;
+}
+.stack_nav {
+  // padding: 5% auto;
+}
+.social_btn{
+  background: black;
+  color: white;
+  width: 25%;
+  float: left;
+}
+.social_btn_text {
+  text-align: center;
+  font-family: 'Raleway';
+}

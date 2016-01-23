@@ -1,0 +1,24 @@
+
+<div ng-style="mobilebuffer" class="site_title2 col-xs-12 col-lg-10 col-lg-offset-1">
+  <image src="/assets/images/site/arttitle.jpg" class="site_title__img img-responsive"></image>
+  <div class="card subtitle_des"> 
+    <p class="text-center">{{artStatement}}</p>
+  </div>
+</div>
+<div class="card design_back container">
+  <div ng-repeat="s in seriesArray" ui-sref="{{s.state}}" ng-style="{'background-image':'url({{s.photo.url}})'}" ng-mouseenter="hoverIn()" ng-mouseleave="hoverOut()" class="col-lg-2 col-md-2 col-xs-12 arthouse_box">
+    <div ng-show="showButton" class="arthouse_box_fade">{{s.title}}</div>
+    <h3 ng-show="mobilecheck" class="arthouse_box_title text-center">{{s.title}}</h3>
+  </div>
+</div>
+<div class="arthouse_header col-xs-10 col-xs-offset-1"> 
+  <h3 class="text-center">My aRt can be found at:</h3>
+</div>
+<div class="arthouse_array container">
+  <div ng-repeat="a in arthouseArray" ng-style="{'background-image':'url({{a.image}})'}" ng-mouseenter="hoverIn()" ng-mouseleave="hoverOut()" class="arthouse_box col-lg-2 col-md-2 col-xs-12">
+    <div ng-show="showButton" class="arthouse_box_fade">
+      <h4 class="text-center arthouse_box_title">{{a.name}}</h4><a ng-href="{{a.url}}">Website</a>
+    </div>
+    <h3 ng-show="mobilecheck" class="arthouse_box_title text-center">{{a.name}}</h3>
+  </div>
+</div>

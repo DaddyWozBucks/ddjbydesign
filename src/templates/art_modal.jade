@@ -1,0 +1,24 @@
+
+div.modal-header.modal_style(ng-click="close()")
+    image.img-responsive(src="assets/images/site/arttitle.jpg")
+div.modal-body.modal_style
+    div  
+      div.viewbtn.l(ng-click="nextView()") 
+        div.next_btn#right
+          span.glyphicon.glyphicon-chevron-right
+      div.viewbtn.r(ng-click="lastView()")  
+        div.next_btn#left
+          span.glyphicon.glyphicon-chevron-left 
+      image.img-responsive.piece_img(ng-src="{{modalCenter.url}}")
+    
+div.modal-footer.modal_style
+  div.text-center Share
+  div.container
+    a(socialshare socialshare-provider="facebook",socialshare-text="Design by Dafydd Dale Jones",socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}", socialshare-media="{{modalImage.shareurl}}") 
+      div.col-xs-1 Facebook
+    a(socialshare socialshare-provider="twitter",socialshare-text="Design by Dafydd Dale Jones",socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}", socialshare-media="{{modalImage.shareurl}}") 
+      div.col-xs-1 Twitter
+    a(socialshare socialshare-provider="pinterest",socialshare-text="Design by Dafydd Dale Jones",socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}", socialshare-media="{{modalImage.shareurl}}")
+      div.col-xs-1 Pinterest
+    a(socialshare socialshare-provider="tumblr",socialshare-text="Design by Dafydd Dale Jones",socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}", socialshare-media="{{modalImage.shareurl}}") 
+      div.col-xs-1 Tumblr

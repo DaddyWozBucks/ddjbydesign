@@ -1,0 +1,12 @@
+
+div.site_title2.col-xs-12.col-lg-10.col-lg-offset-1(ng-style="mobilebuffer")
+  image.site_title__img.img-responsive(src="/assets/images/site/phototitle.jpg")
+  div.card.subtitle_des 
+    p.text-center {{photoObj.description}}
+
+div.photo_body.container 
+  a.photo_tile.col-lg-2.col-md-3.col-xs-12(ng-repeat="image in photoObj.images",ng-click="open(image)" ng-style="{'background-image':'url({{image.url}})'}")      
+
+        
+  
+  
