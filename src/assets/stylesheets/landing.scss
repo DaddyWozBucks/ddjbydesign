@@ -11,10 +11,11 @@
 }
 
   .site_title2 {
-
-    padding: 2%;
-    margin-top: 5%;
-
+    // padding: 2%;
+    margin-top: 3%;
+  @media screen and (min-width: 1000px){
+    margin-top: 2%;
+  }
   }
   .site_title_img {
     margin: 0 auto;
@@ -49,7 +50,7 @@
     margin: 2% auto;
   }
   .landing_image__card {
-    margin: auto;
+    margin: 0 auto;
     padding-bottom: 2rem;
     // min-height:15rem;
     max-height: 450px;
@@ -58,8 +59,8 @@
   }
   .landing_text {
     text-align: center;
-    padding: 2% 5%;
-    margin-bottom: 5%;
+    padding: 2% 2%;
+    margin-bottom: 1%;
   }
   .adj {
     padding: 5% 5%;

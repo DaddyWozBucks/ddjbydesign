@@ -9,7 +9,7 @@ angular.module('ddjSite.controllers', ['ddjSite.services'])
   }
   if ($scope.mobilecheck) {
     $scope.mobilebuffer = {
-      "margin": "10% 0"
+      "margin": "7% 0"
     }
   }
   $scope.indexOf = function(arr, obj){
@@ -20,7 +20,7 @@ angular.module('ddjSite.controllers', ['ddjSite.services'])
         };
         return -1;
     }
-  console.log(!$scope.mobilecheck);
+  console.log($scope.mobilecheck);
 }])
 .controller('LandingCtrl', ['$scope','Images', function($scope, Images){
   $scope.images = Images.imageArray;
@@ -67,7 +67,7 @@ angular.module('ddjSite.controllers', ['ddjSite.services'])
       controller: 'DesignModalCtrl',
       resolve: {
         designs: function () {
-          return $scope.currSeries.photos;
+          return $scope.currSeries;
         },
         photo: photo
       }
@@ -75,7 +75,15 @@ angular.module('ddjSite.controllers', ['ddjSite.services'])
   };
 }])
 .controller('DesignModalCtrl', function($scope, $uibModalInstance, designs, photo) {
-  $scope.designs = designs;
+  $scope.shareShow = false;
+  $scope.showShareOptions = function(){
+    if ($scope.shareShow) {
+      $scope.shareShow = false;
+    } else {
+      $scope.shareShow = true;
+    }
+  }
+  $scope.designs = designs.photos;
   $scope.getMdIndex = function(arr, obj) {
     for(var i = 0; i < arr.length; i++){
         if(angular.equals(arr[i], obj)){
@@ -118,7 +126,7 @@ angular.module('ddjSite.controllers', ['ddjSite.services'])
   $scope.wardrobeHide = false;
   $scope.chairsHide = false;
   $scope.showButton = false;
-  $scope.designStatement = "Design has always interested me.   Not that I'm a car enthusiast, but the design, both exterior and exterior has changed considerably and always I'm surprised at the layout of the different cars and taxis I often find myself in.   And the design of the Parmesan grater has always been an Italian designers both dream and nightmare I feel! I have been lucky enough to have met several designers, from all aspects of design - art, computer, 3D, fashion etc etc. I am always happy to collaborate on a project should you have one in mind."
+
 
   $scope.hoverOut = function () {
       this.showButton = false;
@@ -129,14 +137,35 @@ angular.module('ddjSite.controllers', ['ddjSite.services'])
 
 
 }])
-.controller('IntroCtrl', ['$scope','Parade','$interval', function($scope, Parade,$interval) {
+.controller('IntroCtrl', ['$scope','Parade','$interval', 'deviceDetector',function($scope, Parade, $interval, deviceDetector) {
+  $scope.mobilecheck = deviceDetector.isMobile();
   $scope.parade = Parade.parade;
-  $interval(function() {
-    var slide = $scope.parade[0];
-    $scope.parade.splice(0, 1);
-    $scope.parade.push(slide);
-  }, 1000);
-
+  console.log($scope.mobilecheck);
+  $scope.mIndex = 0;
+  if ($scope.mobilecheck) {
+    $scope.mparade = $scope.parade[$scope.mIndex];
+    $interval(function() {
+      if ($scope.mIndex < $scope.parade.length -1) {
+        $scope.mIndex += 1;
+        $scope.mparade = $scope.parade[$scope.mIndex];
+      } else if ($scope.mIndex == $scope.parade.length -1) {
+        $scope.mIndex = 0;
+      }
+    }, 1000);
+    // $scope.mparade = $scope.parade[0];
+    // $interval(function() {
+    //   var slide = $scope.parade[0];
+    //   $scope.parade.splice(0, 1);
+    //   $scope.parade.push(slide);
+    //   $scope.mparade = $scope.parade[0];
+    // }, 1000);
+  } else {
+    $interval(function() {
+      var slide = $scope.parade[0];
+      $scope.parade.splice(0, 1);
+      $scope.parade.push(slide);
+    }, 1000);
+  }
 }])
 .controller('PhotoCtrl', ['$scope', 'Photo', '$uibModal', function($scope, Photo, $uibModal){
   $scope.logoShow = true;
@@ -156,6 +185,9 @@ angular.module('ddjSite.controllers', ['ddjSite.services'])
       resolve: {
         image: function () {
           return image;
+        },
+        images: function(){
+          return $scope.photoObj.images
         }
       }
     });
@@ -163,10 +195,51 @@ angular.module('ddjSite.controllers', ['ddjSite.services'])
   };
 
 }])
-.controller('PhotoModalCtrl', function ($scope, $uibModalInstance, image) {
-
+.controller('PhotoModalCtrl', function ($scope, $uibModalInstance, image, images) {
+  $scope.shareShow = false;
+  $scope.showShareOptions = function(){
+    if ($scope.shareShow) {
+      $scope.shareShow = false;
+    } else {
+      $scope.shareShow = true;
+    }
+  }
   $scope.modalImage = image;
 
+  $scope.mViewArray = images;
+  console.log($scope.mViewArray);
+  console.log(images);
+  $scope.getMdIndex = function(arr, obj) {
+    for(var i = 0; i < arr.length; i++){
+        if(angular.equals(arr[i], obj)){
+            return i;
+        }
+    };
+  };
+  $scope.mViewIndex = $scope.getMdIndex($scope.mViewArray, $scope.modalImage);
+  $scope.nextView = function() {
+
+    if ($scope.mViewIndex < $scope.mViewArray.length -1 ) {
+      $scope.mViewIndex += 1;
+      $scope.modalImage = $scope.mViewArray[$scope.mViewIndex]
+    } else if ($scope.mViewIndex === $scope.mViewArray.length -1 )  {
+      $scope.mViewIndex = 0;
+      $scope.modalImage = $scope.mViewArray[$scope.mViewIndex];
+    };
+  };
+  $scope.lastView = function() {
+
+    if ($scope.mViewIndex > 0 ) {
+      $scope.mViewIndex -= 1;
+      $scope.modalImage = $scope.mViewArray[$scope.mViewIndex];
+    } else if ($scope.mViewIndex === 0) {
+      $scope.mViewIndex = $scope.mViewArray.length -1;
+      $scope.modalImage = $scope.mViewArray[$scope.mViewIndex];
+    };
+  };
+  $scope.close = function(){
+    $uibModalInstance.close();
+  }
 
 })
 .controller('PhotoDetailCtrl', ['$scope', 'Photo', '$stateParams', function($scope, Photo, $stateParams){
@@ -179,7 +252,6 @@ angular.module('ddjSite.controllers', ['ddjSite.services'])
   $scope.logoShow = true;
   $scope.seriesArray = Images.series;
   $scope.arthouseArray = Images.arthouse;
-  $scope.artStatement = "Since meeting the famous water colourist Patrick Prockter in the 80's I started to paint with him. We developed a style together, using brilliant water colours, with one of our works entitled 'Spike' winning the Sunday Times Water Colour Competition. I was later featured in the book 'Patrick Prockter: Art and Life' by Ian Massey.  During this period I was priviledged to have met so many artists to include David Hockney and Francis Bacon. On Ibiza I discovered holographoc paper. I used this with my own pre-painted and glitter paper to create my art. Cutting up each piece to create my art. Cutting up each piece by hand and sticking them to the board it creates art that changes colour with both light and direction. I had my first exhibition at the Holocenter in New York in December 2014 and have since exhibited in Ibiza and, presently, in Barcelona. I also added my art to a mannequin which now is on show again at Urbans Spaces Hotel, Ibiza ";
   $scope.showButton = false;
   $scope.hoverOut = function () {
       this.showButton = false;
@@ -207,7 +279,7 @@ angular.module('ddjSite.controllers', ['ddjSite.services'])
         controller: 'ArtModalCtrl',
         resolve: {
           art: function () {
-            return $scope.currLib.photos;
+            return $scope.currLib;
           },
           photo: photo
         }
@@ -215,7 +287,15 @@ angular.module('ddjSite.controllers', ['ddjSite.services'])
     };
 }])
 .controller('ArtModalCtrl', function($scope, $uibModalInstance, art, photo) {
-  $scope.designs = art;
+  $scope.shareShow = false;
+  $scope.showShareOptions = function(){
+    if ($scope.shareShow) {
+      $scope.shareShow = false;
+    } else {
+      $scope.shareShow = true;
+    }
+  }
+  $scope.designs = art.photos;
   $scope.getMdIndex = function(arr, obj) {
     for(var i = 0; i < arr.length; i++){
         if(angular.equals(arr[i], obj)){
@@ -350,9 +430,70 @@ angular.module('ddjSite.controllers', ['ddjSite.services'])
     $uibModalInstance.close();
   }
 })
-.controller('BlogCtrl', ['$scope', 'Blog',function($scope, Blog){
+.controller('BlogCtrl', ['$scope', 'Blog', '$uibModal', function($scope, Blog, $uibModal){
   $scope.stories = Blog.stories;
-}])
+  $scope.openBModal = function (story, image) {
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'templates/blogmodal.html',
+      controller: 'BlogModalCtrl',
+      resolve: {
+        image: image,
+        story: story
+      }
+    });
+  };
+  }])
+.controller('BlogModalCtrl', function ($scope, $uibModalInstance, image, story) {
+  $scope.shareShow = false;
+  $scope.showShareOptions = function(){
+    if ($scope.shareShow) {
+      $scope.shareShow = false;
+    } else {
+      $scope.shareShow = true;
+    }
+  }
+  $scope.modalProp = image;
+  $scope.story = story;
+  $scope.mViewArray = $scope.story.images;
+  $scope.getMdIndex = function(arr, obj) {
+    for(var i = 0; i < arr.length; i++){
+        if(angular.equals(arr[i], obj)){
+            return i;
+        }
+    };
+  };
+
+  $scope.mViewIndex = $scope.getMdIndex($scope.mViewArray, $scope.modalProp);
+
+  $scope.modalProp = $scope.mViewArray[$scope.mViewIndex];
+    console.log( $scope.modalProp)
+    console.log($scope.mViewArray)
+    console.log($scope.mViewIndex)
+  $scope.nextView = function() {
+
+   if ($scope.mViewIndex < $scope.mViewArray.length -1 ) {
+     $scope.mViewIndex += 1;
+     $scope.modalProp = $scope.mViewArray[$scope.mViewIndex]
+   } else if ($scope.mViewIndex === $scope.mViewArray.length -1 )  {
+     $scope.mViewIndex = 0;
+     $scope.modalProp = $scope.mViewArray[$scope.mViewIndex];
+   };
+  };
+  $scope.lastView = function() {
+
+   if ($scope.mViewIndex > 0 ) {
+     $scope.mViewIndex -= 1;
+     $scope.modalProp = $scope.mViewArray[$scope.mViewIndex];
+   } else if ($scope.mViewIndex === 0) {
+     $scope.mViewIndex = $scope.mViewArray.length -1;
+     $scope.modalProp = $scope.mViewArray[$scope.mViewIndex];
+   };
+  };
+  $scope.close = function(){
+   $uibModalInstance.close();
+  }
+})
 .controller('PostCtrl', ['$scope', 'Blog','$stateParams', function($scope, Blog, $stateParams){
   $scope.story = Blog.getStory($stateParams.postId);
 }])

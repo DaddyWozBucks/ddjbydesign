@@ -1,0 +1,19 @@
+
+<div ng-click="close()" class="modal-header modal_style">
+  <image src="assets/images/site/designtitle.jpg" class="img-responsive"></image>
+</div>
+<div class="modal-body modal_style">
+  <div> 
+    <div ng-click="nextView()" class="viewbtn l"> 
+      <div id="right" class="modal_btn"><span class="glyphicon glyphicon-chevron-right"></span></div>
+    </div>
+    <div ng-click="lastView()" class="viewbtn r"> 
+      <div id="left" class="modal_btn"><span class="glyphicon glyphicon-chevron-left"> </span></div>
+    </div>
+    <image ng-src="{{modalProp.url}}" class="img-responsive piece_img"></image>
+  </div>
+</div>
+<div class="modal-footer modal_style">
+  <div ng-click="showShareOptions()" class="text-center">Share</div>
+  <div ng-show="shareShow" class="container"> <a socialshare="socialshare" socialshare-provider="facebook" socialshare-text="Photography by Dafydd Dale Jones" socialshare-url="http://ddjbydesign.com/#/photo/" socialshare-media="{{modalImage.shareurl}}" class="social_btn">Facebook</a><a socialshare="socialshare" socialshare-provider="twitter" socialshare-text="Photography by Dafydd Dale Jones" socialshare-url="http://ddjbydesign.com/#/photo/" socialshare-media="{{modalImage.shareurl}}" class="social_btn">Twitter</a><a socialshare="socialshare" socialshare-provider="tumblr" socialshare-text="Photography by Dafydd Dale Jones" socialshare-url="http://ddjbydesign.com/#/photo/" socialshare-media="{{modalImage.shareurl}}" class="social_btn">Tumblr</a></div>
+</div>

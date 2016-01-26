@@ -115,7 +115,7 @@ gulp.task('inject', function () {
 
   var jsStream = gulp.src('./src/assets/js/*.js').pipe(angularFilesort())
     // .pipe(concat('app.js'))
-    // .pipe(uglify())
+    // .pipe(uglify({ 'ascii-only': true }))
     .pipe(gulp.dest('./assets/scripts'));
 
   var appStream = es.merge(jsStream, cssStream);

@@ -12,13 +12,9 @@ div.modal-body.modal_style
       image.img-responsive.piece_img(ng-src="{{modalCenter.url}}")
     
 div.modal-footer.modal_style
-  div.text-center Share
-  div.container
-    a(socialshare socialshare-provider="facebook",socialshare-text="Design by Dafydd Dale Jones",socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}", socialshare-media="{{modalImage.shareurl}}") 
-      div.col-xs-1 Facebook
-    a(socialshare socialshare-provider="twitter",socialshare-text="Design by Dafydd Dale Jones",socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}", socialshare-media="{{modalImage.shareurl}}") 
-      div.col-xs-1 Twitter
-    a(socialshare socialshare-provider="pinterest",socialshare-text="Design by Dafydd Dale Jones",socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}", socialshare-media="{{modalImage.shareurl}}")
-      div.col-xs-1 Pinterest
-    a(socialshare socialshare-provider="tumblr",socialshare-text="Design by Dafydd Dale Jones",socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}", socialshare-media="{{modalImage.shareurl}}") 
-      div.col-xs-1 Tumblr
+div.text-center(ng-click="showShareOptions()") Share
+div.container(ng-show="shareShow")  
+  a.social_btn(socialshare socialshare-provider="facebook",socialshare-text="Photography by Dafydd Dale Jones",socialshare-url="http://ddjbydesign.com/#/photo/", socialshare-media="{{modalImage.shareurl}}") Facebook
+  a.social_btn(socialshare socialshare-provider="twitter", socialshare-text="Photography by Dafydd Dale Jones",socialshare-url="http://ddjbydesign.com/#/photo/", socialshare-media="{{modalImage.shareurl}}") Twitter
+  a.social_btn(socialshare socialshare-provider="tumblr",socialshare-text="Photography by Dafydd Dale Jones",socialshare-url="http://ddjbydesign.com/#/photo/", socialshare-media="{{modalImage.shareurl}}") Tumblr
+              

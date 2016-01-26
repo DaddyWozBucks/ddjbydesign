@@ -13,11 +13,6 @@
     <image ng-src="{{modalCenter.url}}" class="img-responsive piece_img"></image>
   </div>
 </div>
-<div class="modal-footer modal_style">
-  <div class="text-center">Share</div>
-  <div class="container"><a socialshare="socialshare" socialshare-provider="facebook" socialshare-text="Design by Dafydd Dale Jones" socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}" socialshare-media="{{modalImage.shareurl}}"> 
-      <div class="col-xs-1">Facebook</div></a><a socialshare="socialshare" socialshare-provider="twitter" socialshare-text="Design by Dafydd Dale Jones" socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}" socialshare-media="{{modalImage.shareurl}}"> 
-      <div class="col-xs-1">Twitter</div></a><a socialshare="socialshare" socialshare-provider="pinterest" socialshare-text="Design by Dafydd Dale Jones" socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}" socialshare-media="{{modalImage.shareurl}}">
-      <div class="col-xs-1">Pinterest</div></a><a socialshare="socialshare" socialshare-provider="tumblr" socialshare-text="Design by Dafydd Dale Jones" socialshare-url="http://ddjbydesign.com/#/design/{{currSeries.state}}" socialshare-media="{{modalImage.shareurl}}"> 
-      <div class="col-xs-1">Tumblr</div></a></div>
-</div>
+<div class="modal-footer modal_style"></div>
+<div ng-click="showShareOptions()" class="text-center">Share</div>
+<div ng-show="shareShow" class="container"> <a socialshare="socialshare" socialshare-provider="facebook" socialshare-text="Photography by Dafydd Dale Jones" socialshare-url="http://ddjbydesign.com/#/photo/" socialshare-media="{{modalImage.shareurl}}" class="social_btn">Facebook</a><a socialshare="socialshare" socialshare-provider="twitter" socialshare-text="Photography by Dafydd Dale Jones" socialshare-url="http://ddjbydesign.com/#/photo/" socialshare-media="{{modalImage.shareurl}}" class="social_btn">Twitter</a><a socialshare="socialshare" socialshare-provider="tumblr" socialshare-text="Photography by Dafydd Dale Jones" socialshare-url="http://ddjbydesign.com/#/photo/" socialshare-media="{{modalImage.shareurl}}" class="social_btn">Tumblr</a></div>

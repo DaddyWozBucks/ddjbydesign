@@ -8,6 +8,8 @@
 }
 .site_body {
   font-family: 'Raleway';
+  margin: 0 5%;
+  margin-bottom: 10%;
 }
 .prop_viewer{
   // border: 1px solid white;
@@ -20,14 +22,14 @@
   border-radius: 5px;
 }
 .prop_text{
-  margin: 5% 0;
+  margin: 0 5%;
 }
 .prop_img {
   height: 25rem;
   width: auto;
 }
 .view_nav{
-  margin: 2% 5%;
+  margin: 0% 5%;
 }
 .m {
   margin: 0 auto;
@@ -59,6 +61,9 @@
   margin-top: 50%;
   font-size: 4rem;
   font-color: transparentize(grey, .9)
+}
+.view_nav__text {
+  margin-top: 5%;
 }
 .l{
   left: 50%;
@@ -130,4 +135,16 @@
 }
 .prop_desc {
  margin-bottom: 5%;
+}
+#pipeline{
+  font-family: 'Raleway';
+  margin-bottom: 5%;
+}
+.pipeline_link{
+  color: #fff;
+  font-family: 'Raleway';
+  text-align: center;
+}
+.prop_img {
+  margin: 0 auto;
 }

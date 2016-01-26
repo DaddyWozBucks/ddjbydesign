@@ -3,7 +3,7 @@ angular.module('ddjSite.services', [])
   var mirrorart = {
     title: "Mirror aRt",
     state: "app.mirror",
-    description: "Mirrors are very difficult to photograph unless you know how! With my friend Antonio Herrera we captured my MirrorArt perfectly. They measure 22cm x 22cm and are presented in a silver frame. They are currently in the bedrooms of Urban Spaces Hotel, Ibiza where we have a collaboration to sell these pieces.",
+    description: "Mirrors are very difficult to photograph unless you know how! With my friend Antonio Herrera we captured my Mirror aRt perfectly. They measure 22cm x 22cm and are presented in a silver frame. They are currently in the bedrooms of Urban Spaces Hotel, Ibiza where we have a collaboration to sell these pieces.",
     photos: []
   }
   for (var i = 1; i < 10; i++) {
@@ -67,7 +67,7 @@ angular.module('ddjSite.services', [])
     )
   };
   var rockart = {
-    title: "Rock aRt",
+    title: "Stone aRt",
     state: "app.rock",
     description: "",
     lleiniog: [],
@@ -204,7 +204,7 @@ angular.module('ddjSite.services', [])
     {
       title: "Quebec House, Manchester",
       id: "1",
-      description: "This site assembly, buying in a car park and two factory units, developed into 152 apartments, 500sq.ft of offices and 94 underground parking places. The car park was purchased for £300,000 and washed it's face.  The first factory unit took a £100,000 deposit with a delayed completion in September.   The second unit was bought with the same terms for £550,000.   All three were exchanged on in December. Planning was obtained in April, valuing the site at £4.2M.   Our outlay was minimum, with a good team, this deal was completed with a GDV of £30M.",
+      description: "This site assembly, buying in a car park and two factory units, developed into 152 apartments, 500sq.ft of offices and 94 underground parking places. The car park was purchased for £300,000 and washed it's face.  The first factory unit took a £100,000 deposit with a delayed completion in September.   The second unit was bought with the same terms for £550,000.   All three were exchanged on in December. Planning was obtained in April, valuing the site at £4.2M. Our outlay was minimum, with a good team, this deal was completed with a GDV of £30M.",
       photos: [
         {id: "1", url: "/assets/images/property/quebec/IMG_1526.jpg"},
         {id: "2", url: "/assets/images/property/quebec/IMG_1527.jpg"},
@@ -218,7 +218,7 @@ angular.module('ddjSite.services', [])
     {
       title: "Pen-y-Parc, Anglesey, Wales.",
       id: "2",
-      description: "A unique location with fantastic views over Snowdonia and the Great Orme. Being advertised for £1.2M.Agreed to purchase for £700,000 with a 5% deposit and a six month delayed completion.   Planning was obtained within three months to convert the main house into three smaller sellable units. My clients bought the property for their own keeping due to the location, tranquility and view.   One of the units recently came on the market at £700,000.",
+      description: "A unique location with fantastic views over Snowdonia and the Great Orme. Being advertised for £1.2M . Agreed to purchase for £700,000 with a 5% deposit and a six month delayed completion.   Planning was obtained within three months to convert the main house into three smaller sellable units. My clients bought the property for their own keeping due to the location, tranquillity and view.   One of the units recently came on the market at £700,000.",
       photos: [
         {id: "0", url: "/assets/images/property/penparc/IMG_1538.jpg"},
        {id:"1", url: "/assets/images/property/penparc/IMG_1541.jpg"},
@@ -248,7 +248,7 @@ angular.module('ddjSite.services', [])
     {
       title: "Streatham, London",
       id: "5",
-      description: "Commercial and residential.   More to come!",
+      description: "I saw this building which was in disrepair, with five businesses running from the ground floor, and what looked like squatters in the upper parts.   I found the owners, and the property was in probate.   I secured the building at a purchase price of £900,000 with a 50,000 deposit with completion on vacant possession.   During this period we worked on a planning application and helped in securing vacant possession.   Planning was approved for 16 one bedroom, 6 two bedders and 3 three bedroom units, and retaining five retail units, reduced from seven.   The build costs were estimated at a million pounds, and the residential GDV was three and a half million, and the commercial came as profit too.",
       photos: [
         {id: "0", url: "/assets/images/property/streatham/IMG_1534.jpg"},
         {id: "1", url: "/assets/images/property/streatham/IMG_1535.jpg"},
@@ -261,11 +261,18 @@ angular.module('ddjSite.services', [])
     {
       title: "Harrods, Buenos Aires.",
       id: "6",
-      description: "I first saw this building in 2005. On seeing it once or twice more over the next couple of visits to Argentina, I looked into the story and ownership.   My friend, Malcolm McClean was the bank manager for Harrods in London at this time and was able to help in many ways.   I met with the 'owner', Artilio Gibertoni.   I worked on a scheme with Brandon Haw of Foster & Patners.   The scheme was to include shopping, offices, hotel and residential spaces!",
+      description: "I first saw this building in 2005. On seeing it once or twice more over the next couple of visits to Argentina, I looked into the story and ownership.   My friend, Malcolm McClean was the bank manager for Harrods in London at this time and was able to help in many ways.   I met with the 'owner', Artilio Gibertoni.   I worked on a scheme with Brandon Haw of Foster & Patners.   The scheme was to include shopping, offices, hotel and residential spaces",
       photos: [
         { id: "1", url: "http://2.bp.blogspot.com/_AbNytNzp2SY/S8sfg6tVZHI/AAAAAAAACa4/Fk4VizBPby0/s1600/harrods-ba-hoy2.jpg"},
         {id: "2", url: "http://www.buenosairestravelplanet.com/wp-content/uploads/2011/08/harrods-buenos-aires.jpg"}
       ]
+    }
+  ]
+  var collabs = [
+    {
+      id: 1,
+      image: "http://nemolighting.com/files/201403/31/foster-and-partners-4.jpg",
+      url: "http://www.fosterandpartners.com"
     }
   ]
   var proptext = {text: "Between 1999 and 2001 I teamed up with Craig Griffin (Caring Homes Ltd) and started with a £2,500 deposit and a £1 option to trade over £20m worth of property. I travelled constantly during this period to Marrakech, New York, Miami and the Carribean. I was interested to see where, and how people lived, and WHY. Buildings were built. I moved to Anglesey in Wales in 2002 and soon found opportunities there and in Manchester. With the help of Barry Owen OBE (Mason Owen) and Malcolm McClean (ex bank manager at Harrods Bank) as my funders, I went on to buy a pub, barns, a chapel, two garage sites, a country house, a car park and factories. Each were traded or developed with my prize deal assembling a £30,000,000 mixed use scheme in Manchester. I have spent the last few years living on Ibiza, London, Wales and the last two in Argentina. I am currently based in Barcelona and pursuing new projects here. Should you wish to contact me to discuss any requirements or want to get involved in any of my projects, I look forward to hearing from you."}
@@ -277,7 +284,7 @@ angular.module('ddjSite.services', [])
 .factory('Design', function(){
   var boards = {
     title: "Boards",
-    description: "Living in London, I often used a skateboard to travel around. I have visited, and ridden on many parks, but might now enjoy the serene longboard more! I currently have a collaboration with 'Whatever Skateboards' and am also negotiating with Nohakota Boards to put aRt on their longboards etc. We will shortly be bringing in a range of t-shirts and accessories for the enthusiast!",
+    description: "Living in London, I often used a skateboard to travel around. I have visited, and ridden on many parks, but might now enjoy the serene longboard more! I currently have a collaboration with 'Whatever Skateboards' and am also negotiating with State to put my aRt on their longboards etc. We will shortly be bringing in a range of t-shirts and accessories for the enthusiast!",
     links: [
       {
         id: 1,
@@ -294,7 +301,7 @@ angular.module('ddjSite.services', [])
     ],
     photos: []
   }
-  for (var i = 1; i < 6; i++) {
+  for (var i = 1; i < 9; i++) {
     boards.photos.push(
       {
         url: "/assets/images/design/boards/board" + i + ".jpg",
@@ -328,7 +335,7 @@ angular.module('ddjSite.services', [])
     ],
     photos: []
   }
-  for (var i = 1; i < 10; i++) {
+  for (var i = 2; i < 8; i++) {
     chairs.photos.push(
       {
         url: "/assets/images/design/chairs/" + i + ".jpg",
@@ -340,7 +347,7 @@ angular.module('ddjSite.services', [])
 
   var wardrobe = {
     title: "Wardrobe",
-    description: "With the success of the MirrorArt at the urban spaces, I was commissioned to 'decorate' a wardrobe in their chill out area. I was able to combine both my slogans and 'holographic explosions' on the piece.",
+    description: "With the success of the Mirror Art at the urban spaces, I was commissioned to 'decorate' a wardrobe in their chill out area. I was able to combine both my slogans and 'holographic explosions' on the piece.",
     links: [
       {
         id: 1,
@@ -417,7 +424,7 @@ angular.module('ddjSite.services', [])
     {
       seriesId: 2,
       title: chairs.title,
-      photo: chairs.photos[0],
+      photo: chairs.photos[3],
       state: "app.chairs"
     },
     {
@@ -499,13 +506,13 @@ angular.module('ddjSite.services', [])
       id: 3
     },
     {
-      url: "/assets/images/design/chairs/8.jpg",
-      shareurl: "http://www.ddjbydesign.com/assets/images/design/chairs/8.jpg",
+      url: "/assets/images/design/chairs/2.jpg",
+      shareurl: "http://www.ddjbydesign.com/assets/images/design/chairs/2.jpg",
       id: 4
     },
     {
-      url: "/assets/images/design/chairs/9.jpg",
-      shareurl: "http://www.ddjbydesign.com/assets/images/design/chairs/9.jpg",
+      url: "/assets/images/design/chairs/5.jpg",
+      shareurl: "http://www.ddjbydesign.com/assets/images/design/chairs/5.jpg",
       id: 5
     },
     {
@@ -515,10 +522,12 @@ angular.module('ddjSite.services', [])
     },
     {
       url: "/assets/images/art/adart/dlegsafter.jpg",
+      shareurl: "http://www.ddjbydesign.com/assets/images/art/adart/dlegsafter.jpg",
       id: 7
     },
     {
       url :"/assets/images/art/adart/ladyafter.jpg",
+      shareurl: "http://www.ddjbydesign.com/assets/images/art/adart/ladyafter.jpg",
       id: 8
 
     },
@@ -546,49 +555,93 @@ angular.module('ddjSite.services', [])
   var stories = [
     {
       id: 1,
-      title: "Love Rocks",
-      text: "Here will go the description of the art works and the story behind how they were madez",
+      title: "Love Stones",
+      text: "First started using stones in my installations. I then started to use the stones as a way of marketing. I painted each stone with an unforgettable “Love” on one side and my web page on the other. It has proved to be extremely popular amongst those who have found them and sent me their photo proudly holding their stone. Each stone is a rolling stone- like me!",
       images: [
         {
           id: 1,
-          url: "",
-          shareurl: ""
+          url: "assets/images/blog/stones1.jpg",
+          shareurl: "www.ddjbydesign.com/assets/images/blog/stones1.jpg"
+        },
+        {
+          id: 2,
+          url: "assets/images/blog/stones2.jpg",
+          shareurl: "www.ddjbydesign.com/assets/images/blog/stones2.jpg"
+        },
+        {
+          id: 3,
+          url: "assets/images/blog/stones3.jpg",
+          shareurl: "www.ddjbydesign.com/assets/images/blog/stones3.jpg"
+        },
+        {
+          id: 4,
+          url: "assets/images/blog/stones4.jpg",
+          shareurl: "www.ddjbydesign.com/assets/images/blog/stones4.jpg"
+        },
+        {
+          id: 5,
+          url: "assets/images/blog/stones5.jpg",
+          shareurl: "www.ddjbydesign.com/assets/images/blog/stones5.jpg"
+        },
+        {
+          id: 6,
+          url: "assets/images/blog/stones6.jpg",
+          shareurl: "www.ddjbydesign.com/assets/images/blog/stones6.jpg"
         }
+
       ]
     },
     {
       id: 2,
       title: "Chairs",
-      text: "Here will go the description of the art works and the story behind how they were madez",
+      text: "On my return to Ibiza from Argentina I had some chairs hand made from local Ibicenc craftsmen.   I painted and then decorated the chairs with slogans.   I took photos of the chairs in various places, including hanging one from a flyover on Ibiza!   The chairs were used for a time at Palco Cafe, Plaza de Parque, Ibiza, and then went on to Moonk and Figus, Jesus, Ibiza to be exhibited and sold. The chairs are also used at Urban Spaces Hotel, Ibiza.",
       images: [
         {
           id: 1,
-          url: "",
-          shareurl: ""
+          url: "assets/images/blog/chairs2.jpg",
+          shareurl: "www.ddjbydesign.com/assets/images/blog/chairs2.jpg"
+        },
+        {
+          id: 2,
+          url: "assets/images/blog/chairs3.jpg",
+          shareurl: "www.ddjbydesign.com/assets/images/blog/chairs3.jpg"
+        },
+        {
+          id: 3,
+          url: "assets/images/blog/chairs4.jpg",
+          shareurl: "www.ddjbydesign.com/assets/images/blog/chairs4.jpg"
+        },
+        {
+          id: 4,
+          url: "assets/images/blog/chairs5.jpg",
+          shareurl: "www.ddjbydesign.com/assets/images/blog/chairs5.jpg"
+        },
+        {
+          id: 5,
+          url: "assets/images/blog/chairs6.jpg",
+          shareurl: "www.ddjbydesign.com/assets/images/blog/chairs6.jpg"
+        },
+        {
+          id: 6,
+          url: "assets/images/blog/chairs7.jpg",
+          shareurl: "www.ddjbydesign.com/assets/images/blog/chairs7.jpg"
+        },
+        {
+          id: 7,
+          url: "assets/images/blog/chairs8.jpg",
+          shareurl: "www.ddjbydesign.com/assets/images/blog/chairs8.jpg"
         }
       ]
     },
     {
       id: 3,
-      title: "Rocks on Beach",
-      text: "Here will go the description of the art works and the story behind how they were madez",
+      title: "Andrea Oliva",
+      text: "On seeing the flyers for the different clubs and DJs on Ibiza, I picked up a flyer for DJ Andrea Oliva.  I cut up the flyer, added my aRt, and had it framed.  I wrapped up the aRt and left it as a gift for Andrea at the reception of Ushuaia Hotel.  That day, when he played, he held up my aRtwork to the crowd and demanded the artist make himself known - I wasn’t there!",
       images: [
         {
           id: 1,
-          url: "",
-          shareurl: ""
-        }
-      ]
-    },
-    {
-      id: 4,
-      title: "David Oliva",
-      text: "Here will go the description of the art works and the story behind how they were madez",
-      images: [
-        {
-          id: 1,
-          url: "",
-          shareurl: ""
+          url: "assets/images/blog/oliva.jpg",
+          shareurl: "www.ddjbydesign.com/assets/images/blog/oliva.jpg"
         }
       ]
     }

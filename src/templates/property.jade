@@ -3,32 +3,57 @@ div.site_title2.container(ng-style="mobilebuffer")
   div.card.subtitle_des 
     p.text-center.
       Between 1999 and 2001 I teamed up with Craig Griffin (Caring Homes Ltd) and started with a £2,500 deposit and a £1 option to trade over £20m worth of property.
-       I travelled constantly during this period to Marrakech, New York, Miami and the Carribean. I was interested to see where, and how people lived, and WHY. Buildings were built. I moved to Anglesey in Wales in 2002 and soon found opportunities there and in Manchester. With the help of Barry Owen OBE (Mason Owen) and Malcolm McClean (ex bank manager at Harrods Bank) as my funders, I went on to buy a pub, barns, a chapel, two garage sites, a country house, a car park and factories. Each were traded or developed with my prize deal assembling a £30,000,000 mixed use scheme in Manchester. I have spent the last few years living on Ibiza, London, Wales and the last two in Argentina. I am currently based in Barcelona and pursuing new projects here. </br>
-      </br> Should you wish to contact me to discuss any requirements or want to get involved in any of my projects, I look forward to hearing from you."
+       I travelled constantly during this period to Marrakech, New York, Miami and the Caribbean. I was interested to see where, and how people lived, and why buildings were built.</br>
+       </br>
+        I moved to Anglesey in Wales in 2002 and soon found opportunities there and in Manchester. With the help of Barry Owen OBE (Mason Owen) and Malcolm McClean (ex bank manager at Harrods Bank) as my funders, I went on to buy a pub, barns, a chapel, two garage sites, a country house, a car park and factories. Each were traded or developed with my prize deal assembling a £30,000,000 mixed use scheme in Manchester.</br>
+       </br>
+        I have spent the last few years living on Ibiza, London, Wales and the last two in Argentina. Whilst in Argentina I sourced and initiated carpark deals with Barry Tucker EuroCarParks. I am currently based in Barcelona and pursuing new projects here. </br>
+      </br> Should you wish to contact me to discuss any requirements or want to get involved in any of my projects, I look forward to hearing from you.
 div.site_body.container
-  div.col-xs-12
-    h3.text-center Completed Projects 
-  div.piece_viewer.col-xs-12.col-md-5.row
-    div
-      div(ng-hide="mobilecheck")
-        div.viewbtn.l(ng-click="nextView()") 
-          div.next_btn#right
-            span.glyphicon.glyphicon-chevron-right
-        div.viewbtn.r(ng-click="lastView()")  
-          div.next_btn#left
-            span.glyphicon.glyphicon-chevron-left
-  
-      image.img-responsive.piece_img(src="{{centerView.url}}", ng-click="openPModal(centerView)")
-    div.view_nav.btn-group(role="toolbar")
-      div(ng-click="openPModal(centerView)")  
-        h5.text-center Larger Image
-      h3.col-xs-12.col-md-4.text-left Projects:
-      div.col-xs-12.col-md-8
-        button.prop_tile.btn.btn-flat(ng-repeat="prop in propArray", ng-click="propChange(prop.id)") {{prop.id}}
-        
+  h3.text-center Completed Projects 
+  div.piece_viewer.col-xs-12.col-md-5.container
+    div(ng-hide="mobilecheck")
+      div.viewbtn.l(ng-click="nextView()") 
+        div.next_btn#right
+          span.glyphicon.glyphicon-chevron-right
+      div.viewbtn.r(ng-click="lastView()")  
+        div.next_btn#left
+          span.glyphicon.glyphicon-chevron-left
+    image.img-responsive.prop_img(src="{{centerView.url}}", ng-click="openPModal(centerView)")    
   div.col-md-6.col-xs-12.prop_text.container 
-      div.col-xs-12
-        h4.prop_title.text-center {{centerProp.title}}
-      div.col-xs-12  
-        p.prop_desc.text-center {{centerProp.description}}
-  
+    div.view_nav.row
+      h3.text-center.col-sm-3.col-xs-12 Projects:
+      div.btn-group.col-sm-8.col-xs-12(role="toolbar")
+        button.prop_tile.btn.btn-flat(ng-repeat="prop in propArray", ng-click="propChange(prop.id)") {{prop.id}}
+    div.col-xs-12
+      h4.prop_title.text-center {{centerProp.title}}
+    div.col-xs-12  
+      p.prop_desc.text-center {{centerProp.description}}
+  div.col-xs-12.container#pipeline
+    h2.text-center Pipeline Projects:
+    div.text-center
+      a.pipeline_link(ng-href="mailto:ddalejones@yahoo.co.uk?subject=Marina%20Development%20in%20Wales")  Marina Development in Wales
+    div.text-center
+      a.pipeline_link(ng-href="mailto:ddalejones@yahoo.co.uk?subject=Student%20Accom%20Project")  350 student accomodation in Barcelona  
+    div.text-center
+      a.pipeline_link(ng-href="mailto:ddalejones@yahoo.co.uk?subject=Land%20Purchase%20Ibiza")  Large land purchase on Ibiza  
+    div.text-center
+      a.pipeline_link(ng-href="mailto:ddalejones@yahoo.co.uk?subject=Anglesey%20Residential%20Project")  Residential site in a prime location on Anglesey   
+    div.text-center
+      a.pipeline_link(ng-href="mailto:ddalejones@yahoo.co.uk?subject=Ibiza%20Car%20Parks")  Car Parks on Ibiza   
+    div.text-center
+      a.pipeline_link(ng-href="mailto:ddalejones@yahoo.co.uk?subject=Commercial%20and%20Residential%20Development%20in%20Ibiza")  Residential and commercial development site on Ibiza
+    //- p.text-center.
+    //-   Marina development in Wales </br>
+    //-    </br>
+    //-   350 student accomodation in Barcelona </br>
+    //-    </br>
+    //-   Large land purchase on Ibiza </br>
+    //-    </br>
+    //-   Residential site in a prime location on Anglesey </br>
+    //-    </br>
+    //-   Car Parks on Ibiza </br>
+    //-    </br>
+    //-   Residential and commercial development site on Ibiza </br>
+    //-    </br>
+    //-    Marina development in Wales

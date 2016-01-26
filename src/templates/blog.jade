@@ -1,12 +1,16 @@
 div.site_title2.container(ng-style="mobilebuffer")
   image.site_title__img.img-responsive(src="/assets/images/site/designtitle.jpg")
-  div.card.subtitle_des 
-    p.text-center Tales of my art
-.container-fluid
+
+div.container-fluid#postback
+  h2.text-center#blog_text  Blog
   div.post.col-xs-12.col-md-10.col-md-offset-1.container(ng-repeat="story in stories")
-    div.post_image(ng-href="#/app/blog/{{story.id}}")  
-      image.img-responsive(src="{{story.images[0]}}")
-    a.title_box(ng-href="#/app/blog/{{story.id}}")
+    div
+      image.post_image.img-responsive(src="{{story.images[0].url}}")
+    div.title_box
       h3.text-center {{story.title}}
-    a.body_box(ng-href="#/app/blog/{{story.id}}")
+    div.body_box
       p.text-center {{story.text}}
+    div.post_images.col-xs-12.container(ng-hide="story.images.length == 1")
+      div.blogreel.col-xs-3.col-sm-3(ng-repeat="image in story.images" ng-click="openBModal(story, image)" ng-style="{'background-image': 'url({{image.url}})'}")
+        //- image.img-responsive(src="{{image.url}}")
+        

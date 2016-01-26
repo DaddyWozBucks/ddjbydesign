@@ -5,22 +5,26 @@
 <div class="intro_body container">
   <div class="intro_text col-lg-8 col-lg-offset-2 col-xs-12"> 
     <p class="text-center">
-      Since leaving the Island of Anglesey, North Wales, in 1984, at the age of 18, i feel privileged to have travelled extensively and to have met such a cross section of interesting people .
+      Since leaving the Island of Anglesey, North Wales, in 1984, at the age of 18, I feel privileged to have travelled extensively and to have met such a cross section of interesting people.
       </br> 
-      I have been involved in, and run, several differed businesses, mainly property based.   The property business has changed  dramatically in the UK since I first did my first “deal”.  With so much information is available on line, property investment clubs, buy to let mortgages and other lending sources, for me a lot of  the ‘fun’ of the business has gone. ( As with a lot of things in life, sometimes I feel we should have just been content with what we had at the time. )   </br>
-      Modern technology has changed life beyond recognition – when I first went to London in search of work  mobile phones were just being brought onto the market. </br>
+      I have been involved in and run several differed businesses, mainly property-based.   The property business has changed dramatically in the UK since I did my first “deal”.  With so much information available on line, property investment clubs, buy to let mortgages and other lending sources, for me a lot of the ‘fun’ of the business has gone. (As with a lot of things in life, sometimes I feel we should have just been content with what we had at the time. )   </br>
+      Modern technology has changed life beyond recognition – when I first went to London in search of work, mobile phones were just being brought onto the market. </br>
       </br> 
-      I have experienced life in may different “forms”  and lived in many different places,; my story is often listened to with disbelief !   There have been many ups and downs but this varied life suits me.    I am always enthusiastic about projects and believe strongly in helping others.   I am a great advocate of exercise and my skateboarding provides me with instant adrenalin ! </br>
+      I have experienced life in many different “forms” and lived in many different places, my story is often listened to with disbelief! There have been many ups and downs but this varied life suits me. I am always enthusiastic about projects and believe strongly in helping others.  I am a great advocate of exercise and my skateboarding provides me with instant adrenalin! </br>
       </br>
       Along the way I have been helped by very many people, too numerous to mention here, but I will always be grateful to them. </br>
       </br>
       If my life story interests you, and you are looking for a collaborator on any project, I would be very interested to hear from you. </br>
-      
     </p>
   </div>
   <div class="container">
-    <div class="parade row">
+    <div ng-hide="mobilecheck" class="parade row">
       <div ng-repeat="p in parade| orderBy: '$index'" ng-style="{'background-image': 'url({{p.url}})'}" class="parade_item"></div>
+    </div>
+    <div ng-show="mobilecheck" class="mparade container-fluid">
+      <div class="mparade_item col-xs-12">
+        <image src="{{mparade.url}}" class="img-responsive parade_img"></image>
+      </div>
     </div>
     <script async="async" defer="defer" src="//platform.instagram.com/en_US/embeds.js"></script>
   </div>
