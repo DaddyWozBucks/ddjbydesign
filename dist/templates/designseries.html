@@ -13,8 +13,12 @@
   <div class="subtitle_text col-xs-12">{{ currSeries.title | uppercase}} </div>
   <p class="subhead_text text-center"> {{ currSeries.description }} </p>
 </div>
-<div class="tilebox container">
-  <div ng-repeat="image in currSeries.photos | orderBy: 'id'" ng-click="openDModal(image)" ng-style="{'background-image':'url({{image.url}})'}" class="photo_tile col-lg-2 col-md-2 col-sm-3 col-xs-12"></div>
+<div class="tilebox container-fluid row">
+  <div class="col-xs-12">
+    <div ng-repeat="image in currSeries.photos | orderBy: 'id'" ng-click="openAModal(image)" class="test col-lg-3 col-md-3 col-xs-12">
+      <div ng-style="{'background-image':'url({{image.url}})'}" class="photo_tile"></div>
+    </div>
+  </div>
 </div>
 <div class="designlink col-xs-12 col-lg-7">
   <div class="designlink_array container">

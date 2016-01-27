@@ -47,6 +47,10 @@ angular.module('ddjSite.services', [])
       {
         url: "/assets/images/art/adart/blondecompare.jpg",
         id: "6"
+      },
+      {
+        url: "/assets/images/art/adart/5.jpg",
+        id: "7"
       }
 
     ]
@@ -204,7 +208,7 @@ angular.module('ddjSite.services', [])
     {
       title: "Quebec House, Manchester",
       id: "1",
-      description: "This site assembly, buying in a car park and two factory units, developed into 152 apartments, 500sq.ft of offices and 94 underground parking places. The car park was purchased for £300,000 and washed it's face.  The first factory unit took a £100,000 deposit with a delayed completion in September.   The second unit was bought with the same terms for £550,000.   All three were exchanged on in December. Planning was obtained in April, valuing the site at £4.2M. Our outlay was minimum, with a good team, this deal was completed with a GDV of £30M.",
+      description: "This site assembly, buying in a car park and two factory units, developed into 152 apartments, 500sq.ft of offices and 94 underground parking places. The car park was purchased for £300,000 and washed it's face.  The first factory unit took a £100,000 deposit with a delayed completion in September.   The second unit was bought with the same terms for £550,000.   All three were exchanged on in December. Our outlay was no more than £200,000 to obtain a site valuation of £4.2 M. Planning was obtained the following March and the site built out with a GDV of £30 M",
       photos: [
         {id: "1", url: "/assets/images/property/quebec/IMG_1526.jpg"},
         {id: "2", url: "/assets/images/property/quebec/IMG_1527.jpg"},
@@ -545,7 +549,28 @@ angular.module('ddjSite.services', [])
       url: "/assets/images/art/street/2.jpg",
       shareurl: "http://www.ddjbydesign.com/assets/images/art/street/2.jpg",
       id: 11
+    },
+    {
+      url: "/assets/images/art/mirrorart/13.jpg",
+      shareurl: "http://www.ddjbydesign.com/assets/images/art/mirrorart/13.jpg",
+      id: 12
+    },
+    {
+      url: "/assets/images/property/quebec/IMG_1531.jpg",
+      shareurl: "http://www.ddjbydesign.com/assets/images/property/quebec/IMG_1531.jpg",
+      id: 13
+    },
+    {
+      url: "/assets/images/property/streatham/IMG_1540.jpg",
+      shareurl: "http://www.ddjbydesign.comassets/images/property/streatham/IMG_1540.jpg",
+      id: 14
+    },
+    {
+      url: "http://2.bp.blogspot.com/_AbNytNzp2SY/S8sfg6tVZHI/AAAAAAAACa4/Fk4VizBPby0/s1600/harrods-ba-hoy2.jpg",
+      shareurl: "http://2.bp.blogspot.com/_AbNytNzp2SY/S8sfg6tVZHI/AAAAAAAACa4/Fk4VizBPby0/s1600/harrods-ba-hoy2.jpg",
+      id: 15
     }
+
   ]
   return {
     parade: parade
@@ -556,7 +581,7 @@ angular.module('ddjSite.services', [])
     {
       id: 1,
       title: "Love Stones",
-      text: "First started using stones in my installations. I then started to use the stones as a way of marketing. I painted each stone with an unforgettable “Love” on one side and my web page on the other. It has proved to be extremely popular amongst those who have found them and sent me their photo proudly holding their stone. Each stone is a rolling stone- like me!",
+      text: "I first started using stones in my installations. I then started to use the stones as a way of marketing. I painted each stone with an unforgettable “Love” on one side and my web page on the other. It has proved to be extremely popular amongst those who have found them and sent me their photo proudly holding their stone. Each stone is a rolling stone- like me!",
       images: [
         {
           id: 1,

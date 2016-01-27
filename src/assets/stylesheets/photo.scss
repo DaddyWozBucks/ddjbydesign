@@ -1,13 +1,13 @@
 .photo_tile {
   overflow: hidden;
   height: 300px;
-  width: 240px;
+  min-width: auto;
   // float: right;
   padding: 2px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 1rem;
+  // margin: 1%;
 
 
 }
@@ -41,4 +41,9 @@
   border: 2px solid white;
   font-family: 'Raleway';
 
+}
+.test{
+  padding: 1%;
+  background-color: #000;
+  min-width: auto;
 }

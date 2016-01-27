@@ -4,8 +4,10 @@ div.site_title2.col-xs-12.col-lg-10.col-lg-offset-1(ng-style="mobilebuffer")
   div.card.subtitle_des 
     p.text-center {{photoObj.description}}
 
-div.photo_body.container 
-  a.photo_tile.col-lg-2.col-md-3.col-xs-12(ng-repeat="image in photoObj.images",ng-click="open(image)" ng-style="{'background-image':'url({{image.url}})'}")      
+div.photo_body.container-fluid.row  
+  div.col-xs-12 
+    a.test.col-lg-3.col-md-3.col-xs-12(ng-repeat="image in photoObj.images",ng-click="open(image)")
+      div.photo_tile(ng-style="{'background-image':'url({{image.url}})'}")      
 
         
   

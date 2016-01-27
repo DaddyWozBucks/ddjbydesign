@@ -8,9 +8,11 @@ div.container
 div.subtitle_text.col-xs-12 {{ currLib.title}}    
 div.art_subhead.card.header()  
   p.subhead_text.text-center  {{ currLib.description }}   
-div.card.tilebox.container(ng-hide="rockCheck")
-  div.photo_tile.col-lg-2.col-md-2.col-xs-12(ng-repeat="image in currLib.photos | orderBy: 'id'", ng-click="openAModal(image)",ng-style="{'background-image':'url({{image.url}})'}")
-div.card.tilebox.container(ng-show="rockCheck")
+div.tilebox.container-fluid.row(ng-hide="rockCheck")
+  div.col-xs-12
+    div.test.col-lg-3.col-md-3.col-xs-12(ng-repeat="image in currLib.photos | orderBy: 'id'", ng-click="openAModal(image)")
+      div.photo_tile(ng-style="{'background-image':'url({{image.url}})'}")
+div.tilebox.container(ng-show="rockCheck")
   div.col--xs-12.col-md-6.rock_box
     h3.arthouse_header LLeiniog
     div.photo_tile.col-lg-5.col-md-4.col-xs-12(ng-repeat="image in currLib.lleiniog | orderBy: '-id'", ng-click="openAModal(image)",ng-style="{'background-image':'url({{image.url}})'}")

@@ -31,6 +31,12 @@ angular.module('ddjSite',
                   "main": { templateUrl: "templates/intro.html", controller: "IntroCtrl"}
                 }
               })
+              .state('app.friends',{
+                url: '/friends',
+                views: {
+                  "main": { templateUrl: "templates/friends.html", controller: "IntroCtrl"}
+                }
+              })
               .state('app.mirror',{
                 url: '/art/mirror',
                 resolve: {

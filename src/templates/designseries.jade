@@ -13,8 +13,13 @@ div.art_subhead.container
   p.subhead_text.text-center  {{ currSeries.description }} 
   
  
-div.tilebox.container
-  div.photo_tile.col-lg-2.col-md-2.col-sm-3.col-xs-12(ng-repeat="image in currSeries.photos | orderBy: 'id'", ng-click="openDModal(image)",ng-style="{'background-image':'url({{image.url}})'}")
+//- div.tilebox.container
+//-   div.photo_tile.col-lg-2.col-md-2.col-sm-3.col-xs-12(ng-repeat="image in currSeries.photos | orderBy: 'id'", ng-click="openDModal(image)",ng-style="{'background-image':'url({{image.url}})'}")
+div.tilebox.container-fluid.row
+  div.col-xs-12
+    div.test.col-lg-3.col-md-3.col-xs-12(ng-repeat="image in currSeries.photos | orderBy: 'id'", ng-click="openAModal(image)")
+      div.photo_tile(ng-style="{'background-image':'url({{image.url}})'}")
+
 div.designlink.col-xs-12.col-lg-7
   
   div.designlink_array.container

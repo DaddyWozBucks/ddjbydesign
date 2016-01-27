@@ -5,12 +5,12 @@ div.site_title2.col-xs-12.col-lg-10.col-lg-offset-1(ng-style="mobilebuffer")
     p.text-center.
         Since I first met the famous water colourist Patrick Prockter in the 80's we started to paint together. We developed a unique style using brilliant water colours with one of our works, entitled 'Spike', winning the Sunday Times Water Colour Competition. This lead to me being featured in the biography 'Patrick Prockter: Art and Life' by Ian Massey.  During this period, I was privileged to have met many artists, including David Hockney and Francis Bacon. </br>
           </br>
-          On Ibiza I discovered holographic paper. I used this with my own pre-painted and glitter paper to create my art. Cutting up each piece to create my art. Cutting up each piece by hand and sticking them to the board it creates art that changes colour with both light and direction. </br>
+          On Ibiza I discovered holographic paper. I used this with my own pre-painted and glitter paper to create my art. Cutting up each piece by hand and sticking them to the board it creates art that changes colour with both light and direction. </br>
           </br>
           I had my first exhibition at the Holocenter in New York in December 2014 and have since exhibited in Ibiza and, presently, in Barcelona. I also added my art to a mannequin which now is on show again at Urban Spaces Hotel, Ibiza
-div.card.design_back.container
+div.design_back.container
   h2.col-xs-12.text-center My aRt:
-  div.col-lg-2.col-md-2.col-xs-12.arthouse_box( ng-repeat="s in seriesArray" ui-sref="{{s.state}}", ng-style="{'background-image':'url({{s.photo.url}})'}", ng-mouseenter='hoverIn()', ng-mouseleave='hoverOut()')
+  div.col-md-2.col-xs-12.arthouse_box( ng-repeat="s in seriesArray" ui-sref="{{s.state}}", ng-style="{'background-image':'url({{s.photo.url}})'}", ng-mouseenter='hoverIn()', ng-mouseleave='hoverOut()')
     div.arthouse_box_fade(ng-show="showButton") {{s.title}}
     h3.arthouse_box_title.text-center(ng-show="mobilecheck") {{s.title}}
 

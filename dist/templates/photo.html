@@ -5,4 +5,7 @@
     <p class="text-center">{{photoObj.description}}</p>
   </div>
 </div>
-<div class="photo_body container"> <a ng-repeat="image in photoObj.images" ng-click="open(image)" ng-style="{'background-image':'url({{image.url}})'}" class="photo_tile col-lg-2 col-md-3 col-xs-12">     </a></div>
+<div class="photo_body container-fluid row"> 
+  <div class="col-xs-12"> <a ng-repeat="image in photoObj.images" ng-click="open(image)" class="test col-lg-3 col-md-3 col-xs-12">
+      <div ng-style="{'background-image':'url({{image.url}})'}" class="photo_tile">     </div></a></div>
+</div>
