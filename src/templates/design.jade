@@ -2,12 +2,13 @@ div.site_title2.container(ng-style="mobilebuffer")
   image.site_title__img.img-responsive(src="/assets/images/site/designtitle.jpg")
   div.card.subtitle_des 
     p.text-center.
-        Design has always interested me. Not that I'm a car enthusiast, but the design, both interior and exterior has changed considerably and always I'm surprised at the layout of the different cars and taxis I often find myself in.   And the design of the Parmesan grater has always been an Italian designers both dream and nightmare I feel! </br>
+        Design has always interested me. Not that I'm a car enthusiast, but the design, both interior and exterior has changed considerably and always I'm surprised at the layout of the different cars and taxis I often find myself in.   I feel the design of the Parmesan grater has always been both an Italian designer's dream and nightmare! </br>
         </br>
          I have been lucky enough to have met several designers, from all aspects of design - art, computer, 3D, fashion etc etc. I am always happy to collaborate on a project should you have one in mind."
 
-div.card.design_back.container
+div.card.design_back.container#designboxes
   div.col-md-1(ng-hide="mobilecheck")
   div.col-lg-3.col-md-3.col-sm-3.col-xs-12.arthouse_box(ng-repeat="s in seriesArray" ui-sref="{{s.state}}", ng-style="{'background-image':'url({{s.photo.url}})'}", ng-mouseenter='hoverIn()', ng-mouseleave='hoverOut()')
     div.arthouse_box_fade(ng-show="showButton") {{s.title}}
     h3.arthouse_box_title.text-center(ng-show="mobilecheck") {{s.title}}
+div

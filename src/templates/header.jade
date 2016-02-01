@@ -1,39 +1,37 @@
-  
-nav.navbar.navbar-fixed-top.header_card(role="navigation")
-  div.container-fluid
-    <!-- Brand and toggle get grouped for better mobile display -->
-    div.navbar-header
-      button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ddj_navbar")
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-  
-      a.header_item(class="navbar-brand" href="#") DDJ
-  
+div#bc1    
+  nav.navbar.navbar-fixed-top.header_card(role="navigation")
+    div.container-fluid
+      <!-- Brand and toggle get grouped for better mobile display -->
+      div.navbar-header
+        button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ddj_navbar")
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar  
+        a.header_item(class="navbar-brand" href="#") DDJ
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    div(class="collapse navbar-collapse" id="ddj_navbar")
-      ul(class="nav navbar-nav").col-xs
-        li
-          a.header_item(data-toggle="collapse", data-target="#ddj_navbar", ui-sref="app.intro") INTRODUCTION
-        li
-          a.header_item(data-toggle="collapse", data-target="#ddj_navbar", ui-sref="app.art") ART
-        li
-          a.header_item(data-toggle="collapse", data-target="#ddj_navbar", ui-sref="app.design") DESIGN
-        li
-          a.header_item(data-toggle="collapse", data-target="#ddj_navbar", ui-sref="app.photo") PHOTOGRAPHY
-        li
-          a.header_item(data-toggle="collapse", data-target="#ddj_navbar", ui-sref="app.property") PROPERTY
-        li
-          a.header_item(data-toggle="collapse", data-target="#ddj_navbar", ui-sref="app.blog") BLOG 
-        li
-          a.header_item(data-toggle="collapse", data-target="#ddj_navbar", ui-sref="app.contact") CONTACT 
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      div(class="collapse navbar-collapse" id="ddj_navbar")
+        ul(class="nav navbar-nav").col-xs
+          li
+            a.header_item(data-toggle="collapse", data-target="#ddj_navbar", ui-sref="app.intro") INTRODUCTION
+          li
+            a.header_item(data-toggle="collapse", data-target="#ddj_navbar", ui-sref="app.art") ART
+          li
+            a.header_item(data-toggle="collapse", data-target="#ddj_navbar", ui-sref="app.design") DESIGN
+          li
+            a.header_item(data-toggle="collapse", data-target="#ddj_navbar", ui-sref="app.photo") PHOTOGRAPHY
+          li
+            a.header_item(data-toggle="collapse", data-target="#ddj_navbar", ui-sref="app.property") PROPERTY
+          li
+            a.header_item(data-toggle="collapse", data-target="#ddj_navbar", ui-sref="app.blog") BLOG 
+          li
+            a.header_item(data-toggle="collapse", data-target="#ddj_navbar", ui-sref="app.contact") CONTACT 
 
-      
-          
-div.mainui.col-xs-12(ui-view="main")  
-div.block
-div.nav.navbar-fixed-bottom.footer_ui
-  a.text-left(ng-href="http://www.kilroydevelopment.com") Kilroy Development 2016
-   
+        
+            
+  div.mainui(ui-view="main")  
+
+  div.nav.navbar-fixed-bottom.footer_ui
+    a.text-left(ng-href="http://www.kilroydevelopment.com") Kilroy Development 2016
+     

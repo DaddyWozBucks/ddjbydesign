@@ -6,7 +6,7 @@ angular.module('ddjSite.services', [])
     description: "Mirrors are very difficult to photograph unless you know how! With my friend Antonio Herrera we captured my Mirror aRt perfectly. They measure 22cm x 22cm and are presented in a silver frame. They are currently in the bedrooms of Urban Spaces Hotel, Ibiza where we have a collaboration to sell these pieces.",
     photos: []
   }
-  for (var i = 1; i < 10; i++) {
+  for (var i = 1; i < 14; i++) {
     mirrorart.photos.push(
       {
         url: "/assets/images/art/mirrorart/"+ i + ".jpg",
@@ -61,7 +61,7 @@ angular.module('ddjSite.services', [])
     description: "Having started to use glitter paper in my aRt, I then came across a new material - holographic paper.   This was to revolutionise the way I presented my aRt. I went on to have my first exhibition of my 'HoloaRt' at the Holocentre in New York.  I have since exhibited in Ibiza and am currently showing in Barcelona.",
     photos: []
   }
-  for (var i = 1; i < 9; i++) {
+  for (var i = 1; i < 10; i++) {
     holoart.photos.push(
       {
         url: "/assets/images/art/holo/"+ i + ".jpg",
@@ -208,7 +208,7 @@ angular.module('ddjSite.services', [])
     {
       title: "Quebec House, Manchester",
       id: "1",
-      description: "This site assembly, buying in a car park and two factory units, developed into 152 apartments, 500sq.ft of offices and 94 underground parking places. The car park was purchased for £300,000 and washed it's face.  The first factory unit took a £100,000 deposit with a delayed completion in September.   The second unit was bought with the same terms for £550,000.   All three were exchanged on in December. Our outlay was no more than £200,000 to obtain a site valuation of £4.2 M. Planning was obtained the following March and the site built out with a GDV of £30 M",
+      description: "This site assembly, buying in a car park and two factory units, developed into 152 apartments, 5000sq.ft of offices and 94 underground parking places. The car park was purchased for £300,000 and washed its face.  The first factory unit took a £100,000 deposit with a delayed completion in September.   The second unit was bought with the same terms for £550,000.   All three were exchanged on in December. Our outlay was no more than £200,000 to obtain a site valuation of £4.2 million. Planning was obtained the following March and the site built out with a GDV of £30 million",
       photos: [
         {id: "1", url: "/assets/images/property/quebec/IMG_1526.jpg"},
         {id: "2", url: "/assets/images/property/quebec/IMG_1527.jpg"},
@@ -222,7 +222,7 @@ angular.module('ddjSite.services', [])
     {
       title: "Pen-y-Parc, Anglesey, Wales.",
       id: "2",
-      description: "A unique location with fantastic views over Snowdonia and the Great Orme. Being advertised for £1.2M . Agreed to purchase for £700,000 with a 5% deposit and a six month delayed completion.   Planning was obtained within three months to convert the main house into three smaller sellable units. My clients bought the property for their own keeping due to the location, tranquillity and view.   One of the units recently came on the market at £700,000.",
+      description: "A unique location with fantastic views over Snowdonia and the Great Orme. Being advertised for £1.2 million. Agreed to purchase for £700,000 with a 5% deposit and a six month delayed completion.   Planning was obtained within three months to convert the main house into three smaller sellable units. My clients bought the property for their own keeping due to the location, tranquillity and view.   One of the units recently came on the market at £700,000.",
       photos: [
         {id: "0", url: "/assets/images/property/penparc/IMG_1538.jpg"},
        {id:"1", url: "/assets/images/property/penparc/IMG_1541.jpg"},
@@ -265,7 +265,7 @@ angular.module('ddjSite.services', [])
     {
       title: "Harrods, Buenos Aires.",
       id: "6",
-      description: "I first saw this building in 2005. On seeing it once or twice more over the next couple of visits to Argentina, I looked into the story and ownership.   My friend, Malcolm McClean was the bank manager for Harrods in London at this time and was able to help in many ways.   I met with the 'owner', Artilio Gibertoni.   I worked on a scheme with Brandon Haw of Foster & Patners.   The scheme was to include shopping, offices, hotel and residential spaces",
+      description: "I first saw this building in 2005. On seeing it once or twice more over the next couple of visits to Argentina, I looked into the story and ownership.   My friend, Malcolm McClean was the bank manager for Harrods in London at this time and was able to help in many ways.   I met with the 'owner', Artilio Gibertoni.   I worked on a scheme with Brandon Haw of Foster & Partners.   The scheme was to include shopping, offices, hotel and residential spaces",
       photos: [
         { id: "1", url: "http://2.bp.blogspot.com/_AbNytNzp2SY/S8sfg6tVZHI/AAAAAAAACa4/Fk4VizBPby0/s1600/harrods-ba-hoy2.jpg"},
         {id: "2", url: "http://www.buenosairestravelplanet.com/wp-content/uploads/2011/08/harrods-buenos-aires.jpg"}
@@ -339,7 +339,7 @@ angular.module('ddjSite.services', [])
     ],
     photos: []
   }
-  for (var i = 2; i < 8; i++) {
+  for (var i = 2; i < 9; i++) {
     chairs.photos.push(
       {
         url: "/assets/images/design/chairs/" + i + ".jpg",

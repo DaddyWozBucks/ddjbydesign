@@ -12,9 +12,9 @@
 
   .site_title2 {
     // padding: 2%;
-    margin-top: 3%;
+    margin-top: 70px;
   @media screen and (min-width: 1000px){
-    margin-top: 2%;
+    margin-top: 80px;
   }
   }
   .site_title_img {
@@ -54,7 +54,7 @@
     padding-bottom: 2rem;
     // min-height:15rem;
     max-height: 450px;
-
+    margin-bottom: 10%;
 
   }
   .landing_text {
@@ -81,4 +81,7 @@
   height: 5rem;
   width: auto;
 
+}
+#landingbody {
+  min-height: 100%;
 }

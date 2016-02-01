@@ -9,7 +9,7 @@ angular.module('ddjSite.controllers', ['ddjSite.services'])
   }
   if ($scope.mobilecheck) {
     $scope.mobilebuffer = {
-      "margin": "7% 0"
+      "margin": "70px 0"
     }
   }
   $scope.indexOf = function(arr, obj){

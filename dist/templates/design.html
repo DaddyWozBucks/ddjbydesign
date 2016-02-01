@@ -3,17 +3,18 @@
   <image src="/assets/images/site/designtitle.jpg" class="site_title__img img-responsive"></image>
   <div class="card subtitle_des"> 
     <p class="text-center">
-      Design has always interested me. Not that I'm a car enthusiast, but the design, both interior and exterior has changed considerably and always I'm surprised at the layout of the different cars and taxis I often find myself in.   And the design of the Parmesan grater has always been an Italian designers both dream and nightmare I feel! </br>
+      Design has always interested me. Not that I'm a car enthusiast, but the design, both interior and exterior has changed considerably and always I'm surprised at the layout of the different cars and taxis I often find myself in.   I feel the design of the Parmesan grater has always been both an Italian designer's dream and nightmare! </br>
       </br>
        I have been lucky enough to have met several designers, from all aspects of design - art, computer, 3D, fashion etc etc. I am always happy to collaborate on a project should you have one in mind."
       
     </p>
   </div>
 </div>
-<div class="card design_back container">
+<div id="designboxes" class="card design_back container">
   <div ng-hide="mobilecheck" class="col-md-1"></div>
   <div ng-repeat="s in seriesArray" ui-sref="{{s.state}}" ng-style="{'background-image':'url({{s.photo.url}})'}" ng-mouseenter="hoverIn()" ng-mouseleave="hoverOut()" class="col-lg-3 col-md-3 col-sm-3 col-xs-12 arthouse_box">
     <div ng-show="showButton" class="arthouse_box_fade">{{s.title}}</div>
     <h3 ng-show="mobilecheck" class="arthouse_box_title text-center">{{s.title}}</h3>
   </div>
 </div>
+<div></div>

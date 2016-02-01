@@ -1,5 +1,5 @@
 
-<div ng-style="mobilebuffer" class="site_title2 col-xs-12 col-lg-10 col-lg-offset-1">
+<div class="site_title2 container">
   <image src="/assets/images/site/designtitle.jpg" class="site_title__img img-responsive"></image>
 </div>
 <div class="container">
@@ -15,7 +15,7 @@
 </div>
 <div class="tilebox container-fluid row">
   <div class="col-xs-12">
-    <div ng-repeat="image in currSeries.photos | orderBy: 'id'" ng-click="openAModal(image)" class="test col-lg-3 col-md-3 col-xs-12">
+    <div ng-repeat="image in currSeries.photos | orderBy: 'id'" ng-click="openDModal(image)" class="test col-lg-3 col-md-3 col-xs-12">
       <div ng-style="{'background-image':'url({{image.url}})'}" class="photo_tile"></div>
     </div>
   </div>
